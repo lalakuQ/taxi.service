@@ -6,8 +6,9 @@ html, body{
 }
 
 .head_section{
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    
 }
 #yandex_map{
     width: 100%;
@@ -16,34 +17,69 @@ html, body{
     z-index: 0;
 }
 .logo{
-    font-size: 56px;
+    font-size: 20px;
 }
 
 .nav_bar{
-    
-    transform: translateX(-50%);
-    left: 50%;
+    padding: 0 20px;
+    align-items: center;
+    width: 98%;
     height: 10%;
     z-index: 1;
     display: flex;
     justify-content: space-between;
     background: white;
-    border-radius: 15px;
-    margin-top: 15px;
-    border: 1px solid black;
+    border-radius: 24px;
+    margin: 15px 0 0 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+.user-links a{
     
+    color: black;
+}
+.user-links{
+    display: none;
+    position: absolute;
+}
+.nav:hover .user-links a{
+    text-decoration: none;
+    margin-bottom: 15px;
 }
 
-.feats{
-    transform: translateX(-50%);
-    left: 21%;
-    z-index: 1;
-    padding-bottom: 15px;
-    border-radius: 15px;
-    border: 1px solid black;
+.user-links a:hover{
+    transition: 0.125s;
+    color: #f53c2f;
+}
+.nav:hover .user-links{
+    padding: 15px 15px 0 15px;
+    width: 20%;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    display: flex;
+    flex-direction: column;
+}
+.lab{
     margin-top: 15px;
+}
+.drop-menu{
+    margin-top: 15px;
+}
+.logo-text{
+    font-size: 40px;
+}
+.feats{
+    width: 21%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    left: 1%;
+    z-index: 1;
+    border-radius: 25px;
+    margin: 15px 0 15px 15px;
     background: #f4f3f1;
-    
 }
 textarea{
     border: none;
@@ -53,20 +89,19 @@ textarea{
     background: #fff;
     padding: 15px;
     margin-top: 15px;
-    border-radius: 15px;
+    border-radius: 24px;
     display: flex;
     justify-content: space-between;
 }
 .pay_method{
     padding: 15px;
     background: #fff;
-    border-radius: 15px;
+    border-radius: 24px;
     margin-top: 15px;
 }
 .address{
     padding: 15px;
-    margin-top: 15px;
-    border-radius: 15px;
+    border-radius: 24px;
     background: #fff;
 }
 .search{
@@ -76,11 +111,18 @@ textarea{
 .stop{
     width: 100%;
 }
-.order{
+.order-btn{
     border: none;
     height: 56px;
-    margin-top: 15px;
     background: #f9df29;
     border-radius: 16px;
     width: 100%;
+    font-size: 16px;
 }
+.order{
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    border-radius: 24px;
+    padding: 15px;
+    background: #fff;
+}
+
