@@ -15,7 +15,9 @@ html, body{
     height: 100%;
     z-index: 0;
 }
-
+.logo{
+    font-size: 56px;
+}
 
 .nav_bar{
     
@@ -36,16 +38,49 @@ html, body{
     transform: translateX(-50%);
     left: 21%;
     z-index: 1;
+    padding-bottom: 15px;
     border-radius: 15px;
     border: 1px solid black;
     margin-top: 15px;
-    background: #FFF;
+    background: #f4f3f1;
     
 }
-
-.address{
-    resize: None;
+textarea{
+    border: none;
+    border-bottom: 1px solid black;
 }
-.departure{
-
+.car_rates{
+    background: #fff;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.pay_method{
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+.address{
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 15px;
+    background: #fff;
+}
+.search{
+    resize: None;
+    width: 100%;
+}
+.stop{
+    width: 100%;
+}
+.order{
+    border: none;
+    height: 56px;
+    margin-top: 15px;
+    background: #f9df29;
+    border-radius: 16px;
+    width: 100%;
 }
