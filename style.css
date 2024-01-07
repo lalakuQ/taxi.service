@@ -1,14 +1,16 @@
+@font-face {
+    font-family: basker-bold;
+    src: url(fonts/LibreBaskerville-Bold.ttf);
+    font-weight: bold;
+}
 html, body{
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
 }
-
-.head_section{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+textarea{
+    outline: none;
 }
 #yandex_map{
     width: 100%;
@@ -16,15 +18,16 @@ html, body{
     height: 100%;
     z-index: 0;
 }
-.logo{
-    font-size: 20px;
+.head_section{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
-
 .nav_bar{
     padding: 0 20px;
     align-items: center;
     width: 98%;
-    height: 10%;
+    min-height: 70px;
     z-index: 1;
     display: flex;
     justify-content: space-between;
@@ -33,50 +36,42 @@ html, body{
     margin: 15px 0 0 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
 }
-.user-links a, .nav-item-1 a, .logo-text{
+.logo-text{
+    font-family: basker-bold;
+    font-size: 35px;
     color: black;
 }
-.user-links{
-    display: none;
-    position: absolute;
-}
-
-.nav:hover .user-links a{
+.logo-text:hover{
     text-decoration: none;
+    color: black;
 }
-.nav:hover .user-links li{
-    margin-bottom: 15px;
+.nav-item-1 p{
+    transition: .250s;
+    margin-left: 5px;
 }
-.user-menu, .user-links a{
+.nav-item-1 a{
+    color: black;
+}
+.nav-item-1 a{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.nav-item-1 a, .user-links a{
     font-size: 15px;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
 }
-
-.nav:hover .nav-item-1 a{
-    text-decoration: none;
-    color: #f53c2f;
-}
-
 .nav-item-1 p{
-    transition: .125s;
-    margin-left: 5px;
+    margin-bottom: 0;
 }
-.user-links p{
+.user-links{
+    display: none;
+    position: absolute;
+}
+.user-links a, .user-links p{
     color: black;
 }
-.nav:hover .nav-item-1 p{
-    transition: .125s;
-    color: black;
-    transform: rotate(90deg);
-}
-
-.user-links a:hover{
-    transition: .125s;
-    color: #f53c2f;
-}
-
 .nav:hover .user-links{
     display: flex;
     flex-direction: column;
@@ -87,13 +82,34 @@ html, body{
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
     list-style-type: none;
 }
-.nav-item-1{
-    font-weight: 100;
-    margin-top: 15px;
+.nav:hover .user-links a{
+    text-decoration: none;
 }
-
-.logo-text{
-    font-size: 40px;
+.nav:hover .user-links li{
+    margin-bottom: 15px;
+}
+.nav:hover .nav-item-1 a{
+    text-decoration: none;
+    color: #f53c2f;
+}
+.nav:hover .nav-item-1 p{
+    transition: .250s;
+    color: black;
+    transform: rotate(90deg);
+}
+.user-links a:hover{
+    transition: .150s;
+    color: #f53c2f;
+}
+.pfp{
+    border-radius: 50%; 
+    margin-right: 5px;
+    max-width: 42px;
+    max-height: 42px;
+}
+.profile button{
+    border: none;
+    background: #FFF;
 }
 .feats{
     width: 21%;
@@ -109,7 +125,20 @@ html, body{
     background: #f4f3f1;
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
 }
+.address{
+    padding: 15px;
+    border-radius: 24px;
+    background: #fff;
+}
+.departure, .destination{
+    display: flex;
+}
+.departure img, .destination img{
+    margin-right: 16px;
+}
 textarea{
+    resize: None;
+    width: 100%;
     border: none;
     border-bottom: 1px solid black;
 }
@@ -127,17 +156,19 @@ textarea{
     border-radius: 24px;
     margin-top: 15px;
 }
-.address{
-    padding: 15px;
+.add-stop{
+    width: 100%;
+}
+.add-stop button{
+    display: flex;
+    background: #FFF;
+    border: none;
+}
+.order{
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
     border-radius: 24px;
+    padding: 15px;
     background: #fff;
-}
-.search{
-    resize: None;
-    width: 100%;
-}
-.stop{
-    width: 100%;
 }
 .order-btn{
     border: none;
@@ -147,13 +178,8 @@ textarea{
     width: 100%;
     font-size: 16px;
 }
-.order{
-    box-shadow: 0 8px 20px rgba(0,0,0,.12);
-    border-radius: 24px;
-    padding: 15px;
-    background: #fff;
-}
-.pfp{
-    max-width: 42px;
-    max-height: 42px;
-}
+
+
+
+
+
