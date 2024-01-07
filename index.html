@@ -51,24 +51,43 @@
             <div>
                 <div class="address">
                     <span class="departure">
-                        <img src="png/orange_circle.png" width="17px" height="17px" alt=""> 
+                        <div class="circle">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="7" fill="#000"></circle>
+                                <circle cx="12" cy="12" r="4" fill="#fff"></circle>
+                            </svg>
+                        </div>
                         <div>
-                            <span>Откуда</span> 
-                            <textarea class="search" rows="1" placeholder=""></textarea>
+                            <div>
+                                <span>Откуда</span> 
+                                <textarea class="search" rows="1" placeholder="Откуда">Text</textarea>
+                            </div>
+                            <div class="depart-border"></div>
                         </div>
                     </span> 
                     <span class="destination">
-                        <img src="png/black_circle.png" width="17px" height="17px" alt="">
+                        <div class="circle">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="7" fill="#fc5230"></circle>
+                                <circle cx="12" cy="12" r="4" fill="#fff"></circle>
+                            </svg>
+                        </div>
                         <div>
-                            <textarea class="search" id="" rows="1" placeholder="Куда?" ></textarea>
+                            <div>
+                                <textarea class="search" id="" rows="1" placeholder="Куда?" ></textarea>
+                            </div>
+                            <div class="destination-border"></div>
                         </div>
                     </span>
-                <div class="add-stop">
-                    <button>
-                        <img src="png/plus.png" width="17px" height="17px" alt="">
-                        <textarea name="" id="" rows="1" placeholder="Добавить остановку"></textarea> 
-                    </button>
-                </div>
+                    <div class="add-stop">
+                        <div>
+                            <button>
+                                <img src="png/plus.png" width="17px" height="17px" alt="">
+                                <textarea name="" id="" rows="1" placeholder="Добавить остановку"></textarea> 
+                            </button>
+                        </div>
+                        <div class="stop-border"></div>
+                    </div>
                 </div>
            <div class="car_rates">
                 <div>
