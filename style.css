@@ -1,12 +1,11 @@
 @font-face {
-    font-family: 'basker';
-    src: url(fonts/LibreBaskerville-Bold.ttf);
-    font-weight: bold;
-}
-@font-face {
     font-family: 'proxima';
     src: url(fonts/proximanova_regular.ttf);
     font-weight: normal;
+}
+@font-face {
+    font-family: 'proxima-extrabold';
+    src: url(fonts/proximanova_extrabold.otf);
 }
 html, body{
     width: 100%;
@@ -25,7 +24,7 @@ textarea{
     position: absolute;
     height: 100%;
     z-index: 0;
-}
+}   
 .head_section{
     display: flex;
     flex-direction: column;
@@ -45,7 +44,7 @@ textarea{
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
 }
 .logo-text{
-    font-family: basker;
+    font-family: proxima-extrabold;
     font-weight: bold;
     font-size: 35px;
     color: black;
@@ -54,26 +53,34 @@ textarea{
     text-decoration: none;
     color: black;
 }
-.nav{
-    margin-top: 10px;
+.nav-item-1{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
-.nav-item-1 a{
+.nav-inner-1 a{
     color: black;
 }
-.nav-item-1 a, .user-links a{
+.nav-inner-1 button{
+    display: flex;
+    background: #fff;
+    border: none;
+}
+.nav-inner-1 a, .user-links a{
     font-size: 15px;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
 }
-.nav-item-1 p{
+.nav-inner-1 p{
     transition: .250s;
     margin-left: 5px;
     margin-bottom: 0;
 }
 .drop-menu{
+    padding-top: 10px;
     z-index: 1;
-    margin-top: 10px;
 }
 .user-links{
     display: none;
@@ -82,7 +89,7 @@ textarea{
 .user-links a, .user-links p{
     color: black;
 }
-.nav:hover .user-links{
+.nav-item-1:hover .user-links{
     display: flex;
     flex-direction: column;
     padding: 15px 15px 0 15px;
@@ -92,17 +99,17 @@ textarea{
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
     list-style-type: none;
 }
-.nav:hover .user-links a{
+.nav-item-1:hover .user-links a{
     text-decoration: none;
 }
-.nav:hover .user-links li{
+.nav-item-1:hover .user-links li{
     margin-bottom: 15px;
 }
-.nav:hover .nav-item-1 a{
+.nav-item-1:hover .nav-inner-1 a, .nav-item-1:hover .nav-inner-1 button{
     text-decoration: none;
     color: #f53c2f;
 }
-.nav:hover .nav-item-1 p{
+.nav-item-1:hover .nav-inner-1 p{
     transition: .250s;
     color: black;
     transform: rotate(90deg);
@@ -113,11 +120,13 @@ textarea{
 }
 .pfp{
     border-radius: 50%; 
-    margin-right: 5px;
+    margin: 0 5px;
     max-width: 42px;
     max-height: 42px;
 }
 .profile button{
+    padding: 0;
+    width: 100%;
     border: none;
     background: #FFF;
 }
