@@ -8,16 +8,14 @@
     src: url(fonts/proximanova_regular.ttf);
     font-weight: normal;
 }
-@font-face {
-    font-family: 'proxima';
-    src: url('fonts/proximanova_bold.otf');
-    font-weight: bold;
-}
 html, body{
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+}
+*{
+    font-family: proxima;
 }
 textarea{
     outline: none;
@@ -138,6 +136,10 @@ textarea{
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
 }
 .feats-section{
+    display: grid;
+    grid-gap: 5px;
+}
+.address-section{
     padding: 15px 15px 4px 15px;
     border-radius: 24px;
     background: #fff;
@@ -203,18 +205,16 @@ textarea{
 .car-rates{
     background: #fff;
     padding: 15px;
-    margin-top: 15px;
     border-radius: 24px;
     display: grid;
     grid-auto-flow: column;
 }
 .car-rates button{
-    font-family: proxima;
-    font-weight: normal;
     border-radius: 20px;
     padding: 8px 8px 7px;
     width: 100%;
     border: none;
+    transition: .1s;
     background: #FFF;
     display: flex;
     justify-content: space-between;
@@ -241,13 +241,35 @@ textarea{
 }
 .car-rates button:focus{
     font-weight: bold;
+    transition: .1s;
     background: #f4f3f1;
 }
-.pay_method{
-    padding: 15px;
+.pay-section{
+    padding: 18px 8px;
     background: #fff;
     border-radius: 24px;
-    margin-top: 15px;
+}
+.pay-section button{
+    width: 100%;
+    border: none;
+    background: #FFF;
+    font-size: 16px;
+}
+.pay-inner{
+    display: flex;
+    justify-content: space-between;
+}
+.pay-method{
+    color: #9e9b98;
+}
+.pay-arrow{
+    width: 8px;
+    height: 14px;
+}
+.pay-img{
+    margin: 0 8px;
+    width: 36px;
+    height: 24px;
 }
 .order{
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
