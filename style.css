@@ -35,7 +35,7 @@ textarea{
     align-items: center;
     width: 98%;
     min-height: 70px;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     background: white;
@@ -52,6 +52,25 @@ textarea{
 .logo-text:hover{
     text-decoration: none;
     color: black;
+}
+.burger{
+    display: none;
+}
+@media screen and (max-width: 1000px){
+    .logo{order: 2;}
+    .nav{display: none;}
+    .profile{order: 3;}
+    .burger{display: block; order: 1; border: none; 
+    background: #fff; box-shadow: 1px 0 0 #edece8; height: 100%; padding-right: 20px ;}
+    .burger img{
+        width: 24px; 
+        height: 24px;}
+    .burger:focus img{
+        content:url("png/cross.png");
+    }
+    .burger:focus + .nav{
+        /*...*/
+    }
 }
 .nav-item-1{
     padding-top: 10px;
@@ -131,7 +150,7 @@ textarea{
     background: #FFF;
 }
 .feats{
-    width: 21%;
+    width: 360px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
