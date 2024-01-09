@@ -1,6 +1,16 @@
 @font-face {
-    font-family: basker-bold;
+    font-family: 'basker';
     src: url(fonts/LibreBaskerville-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'proxima';
+    src: url(fonts/proximanova_regular.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'proxima';
+    src: url('fonts/proximanova_bold.otf');
     font-weight: bold;
 }
 html, body{
@@ -37,7 +47,8 @@ textarea{
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
 }
 .logo-text{
-    font-family: basker-bold;
+    font-family: basker;
+    font-weight: bold;
     font-size: 35px;
     color: black;
 }
@@ -189,13 +200,48 @@ textarea{
     background: #f4f3f1;
     transition: .1s;
 }
-.car_rates{
+.car-rates{
     background: #fff;
     padding: 15px;
     margin-top: 15px;
     border-radius: 24px;
+    display: grid;
+    grid-auto-flow: column;
+}
+.car-rates button{
+    font-family: proxima;
+    font-weight: normal;
+    border-radius: 20px;
+    padding: 8px 8px 7px;
+    width: 100%;
+    border: none;
+    background: #FFF;
     display: flex;
     justify-content: space-between;
+}
+.car-rates button div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.car-rates img{
+    height: 20px;
+    width: 56px;
+    margin-bottom: 8px;
+}
+.start-price, .comfort-price, .business-price{
+    font-size: 16px;
+}
+.rate-info{
+    max-width: 16px;
+    max-height: 16px;
+}
+.car-rates button:active{
+    scale: 95%;
+}
+.car-rates button:focus{
+    font-weight: bold;
+    background: #f4f3f1;
 }
 .pay_method{
     padding: 15px;
