@@ -56,43 +56,32 @@ textarea{
 .burger{
     display: none;
 }
-@media screen and (max-width: 1000px){
-    .logo{order: 2;}
-    .nav{display: none;}
-    .profile{order: 3;}
-    .burger{display: block; order: 1; border: none; 
-    background: #fff; box-shadow: 1px 0 0 #edece8; height: 100%; padding-right: 20px ;}
-    .burger img{
-        width: 24px; 
-        height: 24px;}
-    .burger:focus img{
-        content:url("png/cross.png");
-    }
-    .burger:focus + .nav{
-        /*...*/
-    }
+.nav{
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 24px;
 }
-.nav-item-1{
+.nav-item{
     padding-top: 10px;
     display: flex;
     flex-direction: column;
     height: 100%;
 }
-.nav-inner-1 a{
+.nav-inner a{
     color: black;
 }
-.nav-inner-1 button{
+.nav-inner button{
     display: flex;
     background: #fff;
     border: none;
 }
-.nav-inner-1 a, .user-links a{
+.nav-inner a, .user-links a{
     font-size: 15px;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
 }
-.nav-inner-1 p{
+.nav-inner p{
     transition: .250s;
     margin-left: 5px;
     margin-bottom: 0;
@@ -108,7 +97,7 @@ textarea{
 .user-links a, .user-links p{
     color: black;
 }
-.nav-item-1:hover .user-links{
+.nav-item:hover .user-links{
     display: flex;
     flex-direction: column;
     padding: 15px 15px 0 15px;
@@ -118,17 +107,17 @@ textarea{
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
     list-style-type: none;
 }
-.nav-item-1:hover .user-links a{
+.nav-item:hover .user-links a{
     text-decoration: none;
 }
-.nav-item-1:hover .user-links li{
+.nav-item:hover .user-links li{
     margin-bottom: 15px;
 }
-.nav-item-1:hover .nav-inner-1 a, .nav-item-1:hover .nav-inner-1 button{
+.nav-item:hover .nav-inner a, .nav-item:hover .nav-inner button{
     text-decoration: none;
     color: #f53c2f;
 }
-.nav-item-1:hover .nav-inner-1 p{
+.nav-item:hover .nav-inner p{
     transition: .250s;
     color: black;
     transform: rotate(90deg);
@@ -314,7 +303,44 @@ textarea{
     font-size: 16px;
 }
 
-
+@media screen and (max-width: 1000px){
+    .logo{order: 2;}
+    .nav{display: none;}
+    .profile{order: 3;}
+    .burger{display: block; order: 1; border: none; 
+    background: #fff; box-shadow: 1px 0 0 #edece8; height: 100%; padding-right: 20px ;}
+    .burger img{
+        width: 24px; 
+        height: 24px;}
+    .burger:focus img{
+        content:url("png/cross.png");
+    }
+    .burger:focus + .nav{
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        position: fixed;
+        width: 320px;
+        top: 0;
+        left: 0;
+        background: #FFF;
+        font-size: 18px;
+    }
+    .nav-item{
+        padding: 20px 12px;
+        height: 64px;
+        width: 100%;
+        border-bottom: 1px solid rgba(210,208,204,.5);
+    }
+    .nav-item span{
+        width: 100%;
+    }
+    .nav-item span button{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
 
 
 
