@@ -53,7 +53,7 @@ textarea{
     text-decoration: none;
     color: black;
 }
-.burger{
+#burger{
     display: none;
 }
 .nav{
@@ -307,24 +307,13 @@ textarea{
     .logo{order: 2;}
     .nav{display: none;}
     .profile{order: 3;}
-    .burger{display: block; order: 1; border: none; 
+    #burger{display: block; order: 1; border: none; 
     background: #fff; box-shadow: 1px 0 0 #edece8; height: 100%; padding-right: 20px ;}
-    .burger img{
+    #burger img{
         width: 24px; 
         height: 24px;}
-    .burger:focus img{
+    #burger:focus img{
         content:url("png/cross.png");
-    }
-    .burger:focus + .nav{
-        height: 100vh;
-        display: flex;
-        justify-content: flex-start;
-        position: fixed;
-        width: 320px;
-        top: 0;
-        left: 0;
-        background: #FFF;
-        font-size: 18px;
     }
     .nav-item{
         padding: 20px 12px;
