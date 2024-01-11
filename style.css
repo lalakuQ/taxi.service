@@ -302,7 +302,30 @@ textarea{
     width: 100%;
     font-size: 16px;
 }
-
+.burger-menu-hidden{
+    display: none;
+}
+.burger-nav-revealed{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    grid-gap: 0;
+    flex-direction: column;
+    position: fixed;
+    width: 320px;
+    top: 0;
+    left: 0;
+    background: #FFF;
+    font-size: 18px;
+}
+.burger-wrap-revealed{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
 @media screen and (max-width: 1000px){
     .logo{order: 2;}
     .nav{display: none;}
