@@ -12,7 +12,7 @@ html, body{
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: scroll;
+    overflow: auto;
 }
 *{
     font-family: proxima;
@@ -30,6 +30,7 @@ textarea{
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow: auto;
 }
 .nav_bar{
     padding: 0 20px;
@@ -57,7 +58,7 @@ textarea{
 #burger{
     display: none;
 }
-.nav{
+#nav{
     display: grid;
     grid-auto-flow: column;
     grid-gap: 24px;
@@ -71,7 +72,7 @@ textarea{
 .nav-inner a{
     color: black;
 }
-.nav-inner button{
+.nav-inner-btn{
     display: flex;
     background: #fff;
     border: none;
@@ -114,7 +115,7 @@ textarea{
 .nav-item:hover .user-links li{
     margin-bottom: 15px;
 }
-.nav-item:hover .nav-inner a, .nav-item:hover .nav-inner button{
+.nav-item:hover .nav-inner a, .nav-item:hover .nav-inner-btn{
     text-decoration: none;
     color: #f53c2f;
 }
@@ -152,6 +153,7 @@ textarea{
     margin: 15px 0 15px 15px;
     background: #f4f3f1;
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    overflow: auto;
 }
 .feats-section{
     display: grid;
@@ -305,15 +307,16 @@ textarea{
 }
 .burger-wrap-hidden{
     visibility: hidden;
-    position: absolute;
+    width: 0;
+    height: 0;
 }
 .burger-nav-hidden{
     visibility: hidden;
-    transform: translateX(-100px);
     height: 100%;
     top: 0;
     left: 0;
     opacity: 0;
+    transform: translateX(-100px);
     transition: opacity .35s ease-in-out, transform .35s ease-in-out;
 }
 .burger-nav-revealed{
@@ -342,11 +345,12 @@ textarea{
     background-color: rgba(66,65,62,.5);
 }
 @media screen and (max-width: 1000px){
-    .logo{order: 2;}
-    .nav{display: none;}
-    .profile{order: 3;}
-    #burger{display: block; order: 1; border: none; 
-    background: #fff; box-shadow: 1px 0 0 #edece8; height: 100%; padding-right: 20px ;}
+    .logo{order: 3; margin: 0 auto;}
+    #nav{display: none;}
+    .profile{order: 4;}
+    #burger{display: block; order: 1; border: none;
+    background: #fff; box-shadow: 1px 0 0 #edece8; padding-right: 20px ;}
+    .burger-wrap-hidden{order: 2;}
     #burger img{
         width: 24px; 
         height: 24px;}
@@ -365,7 +369,7 @@ textarea{
     .nav-item span{
         width: 100%;
     }
-    .nav-item span button{
+    .nav-inner-btn{
         width: 100%;
         display: flex;
         justify-content: space-between;

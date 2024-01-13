@@ -40,7 +40,8 @@ function handle(res) {
             wrap = null;
             burger_status = false;
         }
-        nav.className = 'nav';
+        nav.removeAttribute('class');
+        nav.setAttribute('id', 'nav');
         clickHandlerActive = false;
     }
 }
