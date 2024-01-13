@@ -12,6 +12,7 @@ html, body{
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: scroll;
 }
 *{
     font-family: proxima;
@@ -302,10 +303,21 @@ textarea{
     width: 100%;
     font-size: 16px;
 }
-.burger-menu-hidden{
-    display: none;
+.burger-wrap-hidden{
+    visibility: hidden;
+    position: absolute;
+}
+.burger-nav-hidden{
+    visibility: hidden;
+    transform: translateX(-100px);
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .35s ease-in-out, transform .35s ease-in-out;
 }
 .burger-nav-revealed{
+    opacity: 1;
     height: 100%;
     display: flex;
     justify-content: flex-start;
@@ -317,6 +329,8 @@ textarea{
     left: 0;
     background: #FFF;
     font-size: 18px;
+    transform: translateX(0);
+    transition: opacity .35s ease-in-out, transform .35s ease-in-out;
 }
 .burger-wrap-revealed{
     display: block;
@@ -325,6 +339,7 @@ textarea{
     top: 0;
     left: 0;
     height: 100vh;
+    background-color: rgba(66,65,62,.5);
 }
 @media screen and (max-width: 1000px){
     .logo{order: 2;}
@@ -343,6 +358,9 @@ textarea{
         height: 64px;
         width: 100%;
         border-bottom: 1px solid rgba(210,208,204,.5);
+    }
+    .nav-item p{
+        transition: none;
     }
     .nav-item span{
         width: 100%;

@@ -10,9 +10,11 @@ function clickHandler(event) {
     if (clickHandlerActive && burger_menu.contains(event.target) && burger_status === false) {
         wrap.className = 'burger-wrap-revealed';
         nav.classList.toggle('burger-nav-revealed');
+        nav.classList.toggle('burger-nav-hidden');
         burger_status = true;
     } else if (clickHandlerActive && burger_status === true && !nav.contains(event.target)) {
         nav.classList.toggle('burger-nav-revealed');
+        nav.classList.toggle('burger-nav-hidden');
         wrap.className = 'burger-wrap-hidden';
         burger_status = false;
     }
@@ -28,7 +30,8 @@ function handle(res) {
             wrap.appendChild(nav);
         }
         wrap.className = 'burger-wrap-hidden';
-        nav.classList.remove('nav');
+        nav.className = 'burger-nav-hidden';
+        nav.removeAttribute('id');
         clickHandlerActive = true;
     } else if (!res.matches) {
         if (wrap) {
