@@ -134,11 +134,100 @@ textarea{
     max-width: 42px;
     max-height: 42px;
 }
-.profile button{
+#profile button{
     padding: 0;
     width: 100%;
     border: none;
     background: #FFF;
+}
+#user-pop{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 320px;
+    height: 256px;
+    padding: 24px 14px 12px 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    border-radius: 24px;
+    background: #FFF;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 100px 15px 0 0;
+    z-index: 2;
+}
+.user-pop-hidden{
+    display: none;
+}
+.user-pop-revealed{
+    display: block;
+}
+.user-item-1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.user-inner-1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+    align-items: center;
+}
+.pfp-2{
+    width: 56px;
+    height: 56px;
+}
+.user-inner-1 button{
+    border-radius: 50%; 
+    border: none;
+    background: #FFF;
+}
+.name{
+    font-size: 18px;
+    color: black;
+    font-family: proxima-extrabold;
+}
+.username{
+    font-size: 14px;
+    color: #9e9b98;
+}
+.close-btn{
+    border: none;
+    background: #fff;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 44px;
+}
+.close-btn:hover{
+    background: #f4f3f1;
+}
+.cross-img{
+    width: 20px;
+    height: 20px;
+}
+.user-item-2{
+    display: flex;
+    flex-direction: column;
+}
+.user-item-2 a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 16px;
+}
+.user-item-2 a:hover{
+    text-decoration: none;
+    color: black;
+    background: #f4f3f1;
+    transition: .1s;
+    border-radius: 12px;
+}
+.acc-option-img{
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
 }
 .feats{
     width: 360px;
@@ -347,7 +436,7 @@ textarea{
 @media screen and (max-width: 1000px){
     .logo{order: 3; margin: 0 auto;}
     #nav{display: none;}
-    .profile{order: 4;}
+    #profile{order: 4;}
     #burger{display: block; order: 1; border: none;
     background: #fff; box-shadow: 1px 0 0 #edece8; padding-right: 20px ;}
     .burger-wrap-hidden{order: 2;}
