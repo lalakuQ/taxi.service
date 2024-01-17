@@ -430,6 +430,71 @@ textarea{
     height: 100vh;
     background-color: rgba(66,65,62,.5);
 }
+.auth-section{
+   
+}
+.auth-inner-section{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    background: #000;
+    padding: 32px;
+    border-radius: 32px;
+}
+.auth-inner-section div{
+    width: 100%;
+}
+.auth-inner-section h1{
+    color: #fff;
+    font-family: proxima-extrabold;
+    font-size: 40px;
+}
+.auth-option{
+    display: flex;
+    margin-bottom: 24px;
+    justify-content: center;
+    padding: 2px;
+    border: 1px solid #9e9b98;
+    border-radius: 20px;
+}
+.auth-option button{
+    background: #000;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 16px;
+    color: #9e9b98;
+}
+.auth-input{
+    display: flex;
+    justify-content: center;
+}
+.auth-input input{
+    width: 100%;
+    resize: none;
+    border-radius: 20px;
+    font-size: 24px;
+    height: 56px;
+    padding-left: 10px;
+}
+.auth-input input::placeholder{
+    color: #9e9b98;
+    font-size: 24px;
+}
+.auth-wrap-btn{
+    padding: 15px;
+}
+.auth-btn{
+    border: none;
+    height: 56px;
+    border-radius: 16px;
+    width: 100%;
+    font-size: 16px;
+}
+
 @media screen and (max-width: 1000px){
     .logo{order: 3; margin: 0 auto;}
     #nav{display: none;}
