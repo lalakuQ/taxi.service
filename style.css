@@ -157,10 +157,7 @@ textarea{
     z-index: 2;
 }
 .user-pop-hidden{
-    display: none;
-}
-.user-pop-revealed{
-    display: block;
+    display: none !important;
 }
 .user-item-1{
     display: flex;

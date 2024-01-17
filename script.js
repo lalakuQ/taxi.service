@@ -9,18 +9,18 @@ const sibling = nav.nextSibling;
 const profile = document.getElementById('profile');
 const user_pop = document.getElementById('user-pop');
 
+
 function profile_clickHandler(event){
-    if (profile_status === false && profile.contains(event.target)){
-        user_pop.classList.toggle('user-pop-revealed');    
+    if (profile_status === false && profile.contains(event.target)){  
         user_pop.classList.toggle('user-pop-hidden');
         profile_status = true;
     }
     else if (profile_status === true && !user_pop.contains(event.target)){
-        user_pop.classList.toggle('user-pop-revealed');
         user_pop.classList.toggle('user-pop-hidden');
         profile_status = false;
     }
 }
+
 
 function clickHandler(event) {
     if (clickHandlerActive && burger_menu.contains(event.target) && burger_status === false) {
@@ -36,6 +36,7 @@ function clickHandler(event) {
         burger_status = false;
     }
 }
+
 
 function handle(res) {
     if (res.matches) {
@@ -61,6 +62,7 @@ function handle(res) {
         clickHandlerActive = false;
     }
 }
+
 
 document.addEventListener('click', clickHandler);
 document.addEventListener('click', profile_clickHandler);
