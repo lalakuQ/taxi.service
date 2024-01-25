@@ -1,11 +1,10 @@
 @font-face {
-    font-family: 'proxima';
-    src: url(fonts/proximanova_regular.ttf);
-    font-weight: normal;
+    font-family: 'proxima-nova-regular';
+    src: url(../fonts/proximanova_regular.ttf);
 }
 @font-face {
-    font-family: 'proxima-extrabold';
-    src: url(fonts/proximanova_extrabold.otf);
+    font-family: 'proxima-nova-extrabold';
+    src: url(../fonts/proximanova_extrabold.otf);
 }
 html, body{
     width: 100%;
@@ -15,7 +14,7 @@ html, body{
     overflow: auto;
 }
 *{
-    font-family: proxima;
+    font-family: proxima-nova-regular;
 }
 textarea{
     outline: none;
@@ -46,7 +45,7 @@ textarea{
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
 }
 .logo-text{
-    font-family: proxima-extrabold;
+    font-family: proxima-nova-extrabold;
     font-weight: bold;
     font-size: 35px;
     color: black;
@@ -182,7 +181,7 @@ textarea{
 .name{
     font-size: 18px;
     color: black;
-    font-family: proxima-extrabold;
+    font-family: proxima-nova-extrabold;
 }
 .username{
     font-size: 14px;
@@ -448,7 +447,7 @@ textarea{
 }
 .auth-inner-section h1{
     color: #fff;
-    font-family: proxima-extrabold;
+    font-family: proxima-nova-extrabold;
     font-size: 40px;
 }
 .auth-option{
