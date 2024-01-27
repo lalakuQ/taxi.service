@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../../static/css/style.css">
 </head>
 <body> 
+    <form method="post">
+    {% csrf_token %}
     <div class="auth-section">
         <div class="auth-inner-section">
             <h1>Вход</h1>
@@ -15,12 +17,13 @@
                 <button>Телефон</button>
             </div>
             <div class="auth-input">
-                <input placeholder="Логин или email"></input>
+                {{ form.username_or_email}}
             </div>
             <div class="auth-wrap-btn">
                 <button class="auth-btn">Войти</button>
             </div>
         </div>
     </div>
+    </form>
 </body>
 </html>
