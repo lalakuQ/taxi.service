@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from models import CustomUser
-from forms import CustomUserCreationForm
+from .forms import LoginForm
 
 
 def homepage(request):
@@ -8,10 +7,9 @@ def homepage(request):
 
 
 def register(request):
-    form = CustomUserCreationForm()
+    form = LoginForm()
     if request.method == 'POST':
-        form = CustomUserCreationForm(request.POST)
-
+        form = LoginForm(request.POST)
         if form.is_valid():
             form.save()
 
