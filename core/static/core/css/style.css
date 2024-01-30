@@ -430,7 +430,7 @@ textarea{
     background-color: rgba(66,65,62,.5);
 }
 .login-body{
-    background-image: url(../imgs/back.jpg);
+    background-image: url(../../core/imgs/back.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
