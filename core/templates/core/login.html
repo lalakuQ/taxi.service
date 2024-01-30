@@ -6,14 +6,14 @@
     <title>Login</title>
     <link rel="stylesheet" href="../../static/core/css/style.css">
 </head>
-<body> 
-    <form method="post">
+<body class="login-body"> 
+    <form class="form" method="post">
     {% csrf_token %}
         <div class="auth-section">
             <div class="auth-inner-section">
                 <h1>Вход</h1>
                 <div class="auth-option">
-                    <button>Почта</butto>
+                    <button>Почта</button>
                     <button>Телефон</button>
                 </div>
                 <div class="auth-input">

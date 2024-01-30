@@ -429,11 +429,22 @@ textarea{
     height: 100vh;
     background-color: rgba(66,65,62,.5);
 }
+.login-body{
+    background-image: url(../imgs/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .auth-section{
-   
+   max-width: 376px;
+   max-height: 567px;
 }
 .auth-inner-section{
-    width: 25%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -466,6 +477,7 @@ textarea{
     padding: 20px 0;
     font-size: 16px;
     color: #9e9b98;
+    cursor: pointer;
 }
 .auth-input{
     display: flex;
@@ -492,6 +504,7 @@ textarea{
     border-radius: 16px;
     width: 100%;
     font-size: 16px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1000px){
