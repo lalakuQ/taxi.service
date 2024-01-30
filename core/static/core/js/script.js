@@ -8,6 +8,8 @@ const nav = document.getElementById('nav');
 const sibling = nav.nextSibling;
 const profile = document.getElementById('profile');
 const user_pop = document.getElementById('user-pop');
+const auth_phone = document.getElementById('auth-phone');
+const auth_email = document.getElementById('auth-email');
 
 
 function profile_clickHandler(event){
@@ -63,7 +65,16 @@ function handle(res) {
     }
 }
 
-
+function auth_btn_clickHandler(event){
+    if (auth_phone.contains(event.target)){
+        auth_phone.classList.toggle('auth-option-active');
+    }
+    else if(auth_email.contains(event.target)){
+        auth_email.classList.toggle('auth-option-active');
+    }
+    
+}
+document.addEventListener('click', auth_btn_clickHandler)
 document.addEventListener('click', clickHandler);
 document.addEventListener('click', profile_clickHandler);
 handle(mediaQuery)

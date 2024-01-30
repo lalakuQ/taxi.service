@@ -479,6 +479,9 @@ textarea{
     color: #9e9b98;
     cursor: pointer;
 }
+.auth-option-active{
+    background: #9e9b98;
+}
 .auth-input{
     display: flex;
     justify-content: center;
