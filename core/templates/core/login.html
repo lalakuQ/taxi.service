@@ -14,14 +14,14 @@
             <div class="auth-inner-section">
                 <h1>Вход</h1>
                 <div class="auth-option">
-                    <button id="auth-email">Почта</button>
+                    <button id="auth-email" class="auth-option-active" value="clicked">Почта</button>
                     <button id="auth-phone">Телефон</button>
                 </div>
                 <div class="auth-input">
-                    <input placeholder="Логин или email"></input>
+                    <input type="text" required="true" name="user_login" value="{{current_user_login}}" placeholder="Логин или email"></input>
                 </div>
                 <div class="auth-wrap-btn">
-                    <button class="auth-btn">Войти</button>
+                    <button class="auth-btn" type="submit">Войти</button>
                 </div>
             </div>
         </div>
