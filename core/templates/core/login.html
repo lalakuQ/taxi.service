@@ -18,16 +18,16 @@
                     <button id="auth-phone">Телефон</button>
                 </div>
                 <div class="auth-input">
-                    <input type="text" required="true" name="user_login" value="{{current_user_login}}" placeholder="Логин или email"></input>
+                    <input type="text" name="user_login" value="{{current_user_login}}" placeholder="Логин или email"></input>
                 </div>
                 <div class="auth-wrap-btn">
                     <button class="signin-btn" type="submit">Войти</button>
-                    <button class="register-btn">Создать аккаунт</button>
+                    <button class="register-btn" name="signup" value="signup">Создать аккаунт</button>
                 </div>
                 
             </div>
         </div>
     </form>
-    <script type = "text/javascript" src="{% static 'core/js/script.js' %}" ></script>
+    <script type = "text/javascript" src="{% static 'core/js/login.js' %}" ></script>
 </body>
 </html>

@@ -16,7 +16,7 @@ class CreateUserForm(UserCreationForm):
 
 
 class LoginForm(AuthenticationForm, UserChangeForm):
-    user_login = forms.CharField(widget=TextInput())
+    user_login = forms.CharField(widget=TextInput(), required=False)
     password = forms.CharField(widget=PasswordInput(), required=False)
 
     def clean(self):

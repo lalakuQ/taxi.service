@@ -470,6 +470,7 @@ textarea{
     border-radius: 20px;
 }
 .auth-option button{
+    transition: .1s;
     background: #000;
     border: none;
     border-radius: 20px;
@@ -500,6 +501,7 @@ textarea{
 }
 .auth-input input:focus{
     outline: none;
+    color: #FFF;
 }
 .auth-input input::placeholder{
     color: #9e9b98;

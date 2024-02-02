@@ -12,8 +12,12 @@ def register(request):
 
 
 def login(request):
+
     if request.method == 'POST':
         form = LoginForm(request.POST)
+        if request.POST.get('signup'):
+            return HttpResponse('po')
+
         if form.is_valid():
             user_input = form.cleaned_data.get('user_login')
             user_model = get_user_model()
