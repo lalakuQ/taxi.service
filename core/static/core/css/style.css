@@ -466,7 +466,7 @@ textarea{
     margin-bottom: 24px;
     justify-content: center;
     padding: 2px;
-    border: 1px solid #9e9b98;
+    border: 1px solid #39393e;
     border-radius: 20px;
 }
 .auth-option button{
@@ -480,20 +480,26 @@ textarea{
     cursor: pointer;
 }
 .auth-option-active{
-    background: #9e9b98 !important;
-    color: #000 !important;
+    background: #2f2f35 !important;
+    color: #fff !important;
 }
 .auth-input{
     display: flex;
     justify-content: center;
 }
 .auth-input input{
+    caret-color: #fff;
     width: 100%;
     resize: none;
     border-radius: 20px;
     font-size: 24px;
     height: 56px;
     padding-left: 10px;
+    border: 1px solid #39393e;
+    background: #000;
+}
+.auth-input input:focus{
+    outline: none;
 }
 .auth-input input::placeholder{
     color: #9e9b98;
@@ -502,13 +508,19 @@ textarea{
 .auth-wrap-btn{
     padding: 15px;
 }
-.auth-btn{
+.signin-btn, .register-btn{
     border: none;
     height: 56px;
     border-radius: 16px;
     width: 100%;
     font-size: 16px;
     cursor: pointer;
+}
+.register-btn{
+    margin-top: 15px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #39393e;
 }
 
 @media screen and (max-width: 1000px){

@@ -30,6 +30,7 @@ def login(request):
             except user_model.DoesNotExist:
                 return HttpResponse('Invalid credentials')
         else:
+            print(form.error_messages)
             return HttpResponse('Invalid form')
     else:
         form = LoginForm()
