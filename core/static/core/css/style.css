@@ -536,7 +536,7 @@ textarea{
         width: 24px; 
         height: 24px;}
     #burger:focus img{
-        content:url("png/cross.png");
+        content:url('../imgs/cross.png');
     }
     .nav-item{
         padding: 20px 12px;
