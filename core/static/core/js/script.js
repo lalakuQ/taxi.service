@@ -15,13 +15,7 @@ const auth_section = document.getElementsByClassName('auth-inner-section');
 
 window.onload = function() {
     let buttons = document.getElementsByTagName('button');
-    if (buttons){
-        for (let i = 0; i < buttons.length; i++){
-            buttons[i].addEventListener('click', function(event){
-                event.preventDefault();
-            });
-        }
-    }
+    
 }
 
 function profile_clickHandler(event){
@@ -49,6 +43,7 @@ function auth_btn_clickHandler(event){
 function signup_btn_clickHandler(event){
     if (signup_btn){
         if (signup_btn[0].contains(event.target)){
+            event.preventDefault()
             for (let i = 0; i < auth_section.length; i++){
                 auth_section[i].classList.toggle('auth-inner-section-hidden');
             }

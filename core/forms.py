@@ -10,9 +10,14 @@ from django.forms.widgets import PasswordInput, TextInput
 
 
 class CreateUserForm(UserCreationForm):
+    def __init__(self, *args, **kwargs):
+        super(UserCreationForm, self).__init__(*args, **kwargs)
+        del self.fields['password2']
+        del self.fields['password1']
+
     class Meta:
         model = CustomUser
-        fields = ('username', 'email', 'password')
+        fields = ('email', 'password')
 
 
 class LoginForm(AuthenticationForm, UserChangeForm):
