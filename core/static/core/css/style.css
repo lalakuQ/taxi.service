@@ -444,6 +444,9 @@ textarea{
    max-width: 376px;
    max-height: 567px;
 }
+.auth-inner-section-hidden{
+    display: none !important;
+}
 .auth-inner-section{
     display: flex;
     align-items: center;
@@ -488,7 +491,14 @@ textarea{
     display: flex;
     justify-content: center;
 }
+.signup-section{
+    text-align: center;
+}
+.signup-section .auth-input{
+    margin-bottom: 15px;
+}
 .auth-input input{
+    color: #FFF;
     caret-color: #fff;
     width: 100%;
     resize: none;
@@ -498,10 +508,7 @@ textarea{
     padding-left: 10px;
     border: 1px solid #39393e;
     background: #000;
-}
-.auth-input input:focus{
     outline: none;
-    color: #FFF;
 }
 .auth-input input::placeholder{
     color: #9e9b98;
@@ -510,7 +517,7 @@ textarea{
 .auth-wrap-btn{
     padding: 15px;
 }
-.signin-btn, .register-btn{
+.signin-btn, .signup-btn, .continue{
     border: none;
     height: 56px;
     border-radius: 16px;
@@ -518,7 +525,7 @@ textarea{
     font-size: 16px;
     cursor: pointer;
 }
-.register-btn{
+.signup-btn{
     margin-top: 15px;
     background-color: #000;
     color: #fff;
@@ -526,15 +533,26 @@ textarea{
 }
 
 @media screen and (max-width: 1000px){
-    .logo{order: 3; margin: 0 auto;}
-    #nav{display: none;}
-    #profile{order: 4;}
-    #burger{display: block; order: 1; border: none;
-    background: #fff; box-shadow: 1px 0 0 #edece8; padding-right: 20px ;}
-    .burger-wrap-hidden{order: 2;}
+    .logo{
+        order: 3; margin: 0 auto;
+    }
+    #nav{
+        display: none;
+    }
+    #profile{
+        order: 4;
+    }
+    #burger{
+        display: block; order: 1; border: none;
+        background: #fff; box-shadow: 1px 0 0 #edece8; padding-right: 20px;
+    }
+    .burger-wrap-hidden{
+        order: 2;
+    }
     #burger img{
         width: 24px; 
-        height: 24px;}
+        height: 24px;
+    }
     #burger:focus img{
         content:url('../imgs/cross.png');
     }

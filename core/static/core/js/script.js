@@ -9,11 +9,14 @@ const profile = document.getElementById('profile');
 const user_pop = document.getElementById('user-pop');
 const auth_phone = document.getElementById('auth-phone');
 const auth_email = document.getElementById('auth-email');
+const signup_btn = document.getElementsByClassName('signup-btn');
+const auth_section = document.getElementsByClassName('auth-inner-section');
+
 
 window.onload = function() {
-    var buttons = document.getElementsByTagName('button');
+    let buttons = document.getElementsByTagName('button');
     if (buttons){
-        for (var i = 0; i < buttons.length; i++){
+        for (let i = 0; i < buttons.length; i++){
             buttons[i].addEventListener('click', function(event){
                 event.preventDefault();
             });
@@ -33,7 +36,6 @@ function profile_clickHandler(event){
         }
     }
 }
-    
 
 function auth_btn_clickHandler(event){
     if(auth_phone){
@@ -42,9 +44,17 @@ function auth_btn_clickHandler(event){
             auth_email.classList.toggle('auth-option-active');
         }
     }
-    
 }
 
+function signup_btn_clickHandler(event){
+    if (signup_btn){
+        if (signup_btn[0].contains(event.target)){
+            for (let i = 0; i < auth_section.length; i++){
+                auth_section[i].classList.toggle('auth-inner-section-hidden');
+            }
+        }
+    }
+}
 function clickHandler(event) {
     if(burger_menu){
         if (clickHandlerActive && burger_menu.contains(event.target) && burger_status === false) {
@@ -63,9 +73,8 @@ function clickHandler(event) {
     
 }
 
-
 function handle(res) {
-    if(nav){
+    if (nav){
 
         if (res.matches) {
             if (!wrap) {
@@ -92,7 +101,7 @@ function handle(res) {
     }
 }
 
-
+document.addEventListener('click', signup_btn_clickHandler)
 document.addEventListener('click', auth_btn_clickHandler)
 document.addEventListener('click', clickHandler);
 document.addEventListener('click', profile_clickHandler);

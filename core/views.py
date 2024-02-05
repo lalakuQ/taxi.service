@@ -3,6 +3,8 @@ from .forms import LoginForm
 from django.db.models import Q
 from django.contrib.auth import get_user_model, authenticate
 from django.http import HttpResponse
+
+
 def homepage(request):
     return render(request, 'core/index.html')
 
@@ -39,4 +41,3 @@ def login(request):
     else:
         form = LoginForm()
         return render(request, 'login.html', {'form': form})
-
