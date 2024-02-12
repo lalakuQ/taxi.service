@@ -34,7 +34,7 @@ def auth(request):
             signup_form = CreateUserForm(request.POST)
             if signup_form.is_valid():
                 signup_form.save()
-                return redirect('core/index.html')
+                return redirect('index.html')
             else:
                 return HttpResponse(str(signup_form.errors))
         else:

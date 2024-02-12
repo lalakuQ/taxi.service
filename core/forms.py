@@ -11,9 +11,18 @@ from django.forms.widgets import PasswordInput, TextInput
 
 class CreateUserForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
-        super(UserCreationForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         del self.fields['password2']
         del self.fields['password1']
+
+    def save(self, commit=True):
+        user = CustomUser(email=self.cleaned_data['email'])
+        user.set_password(self.cleaned_data["password"])
+        if commit:
+            user.save()
+            if hasattr(self, "save_m2m"):
+                self.save_m2m()
+        return user
 
     class Meta:
         model = CustomUser
