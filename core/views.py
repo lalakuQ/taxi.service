@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import LoginForm, CreateUserForm
+from .forms import LoginForm, RegisterForm
 from django.db.models import Q
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
@@ -24,22 +24,23 @@ def auth(request):
                         user = authenticate(request, username=user.username, password=password)
                         if user:
                             login(request, user)
-                            return redirect('core/index.html')
+                            return redirect('home')
                         else:
                             return HttpResponse('Invalid credentials')
                 except user_model.DoesNotExist:
                     return HttpResponse('Invalid credentials')
 
         elif 'signup' in request.POST:
-            signup_form = CreateUserForm(request.POST)
+            signup_form = RegisterForm(request.POST)
+            render(request, 'core/login.html', {'form': signup_form})
             if signup_form.is_valid():
                 signup_form.save()
-                return redirect('index.html')
+                return redirect('home')
             else:
                 return HttpResponse(str(signup_form.errors))
         else:
             return HttpResponse(request.POST)
     else:
         form = LoginForm()
-        signup_form = CreateUserForm()
-        return render(request, 'login.html', {'form': form})
+        signup_form = RegisterForm()
+        return render(request, 'core/login.html', {'LoginForm': form})

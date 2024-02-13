@@ -9,14 +9,19 @@ from django.forms import ModelForm
 from django.forms.widgets import PasswordInput, TextInput
 
 
-class CreateUserForm(UserCreationForm):
+class RegisterForm(UserCreationForm):
+    username = forms.CharField(widget=TextInput(), required=True)
+    email = forms.EmailField(required=True)
+    password = forms.CharField(widget=PasswordInput(), required=True)
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         del self.fields['password2']
         del self.fields['password1']
 
     def save(self, commit=True):
-        user = CustomUser(email=self.cleaned_data['email'])
+        user = CustomUser(email=self.cleaned_data['email'],
+                          username=self.cleaned_data['username'])
         user.set_password(self.cleaned_data["password"])
         if commit:
             user.save()
@@ -24,22 +29,8 @@ class CreateUserForm(UserCreationForm):
                 self.save_m2m()
         return user
 
-    class Meta:
-        model = CustomUser
-        fields = ('email', 'password')
 
-
-class LoginForm(AuthenticationForm, UserChangeForm):
+class LoginForm(forms.Form):
     user_login = forms.CharField(widget=TextInput(), required=False)
     password = forms.CharField(widget=PasswordInput(), required=False)
 
-    def clean(self):
-        cleaned_data = super().clean()
-        user_login = cleaned_data.get('user_login')
-        password = cleaned_data.get('password')
-
-        if not user_login and not password:
-            raise forms.ValidationError(
-                "Both fields are empty. Please fill out at least one field.",
-                code='invalid'
-            )

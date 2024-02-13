@@ -12,7 +12,6 @@ const auth_email = document.getElementById('auth-email');
 const signup_btn = document.getElementsByClassName('signup-btn');
 const auth_section = document.getElementsByClassName('auth-inner-section');
 
-
 window.onload = function() {
     let buttons = document.getElementsByTagName('button');
     
@@ -50,6 +49,7 @@ function signup_btn_clickHandler(event){
         }
     }
 }
+
 function clickHandler(event) {
     if(burger_menu){
         if (clickHandlerActive && burger_menu.contains(event.target) && burger_status === false) {
